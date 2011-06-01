@@ -3,7 +3,7 @@
 %define mandriva_libdir %{_libdir}/mandriva
 
 Name:           mdvpkg
-Version:        0.5.3
+Version:        0.5.4
 Release:        0
 
 Summary:        Mandriva D-Bus packaging abstraction layer
