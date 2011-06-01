@@ -4,12 +4,12 @@
 
 Name:           mdvpkg
 Version:        0.5.4
-Release:        1
+Release:        2
 
 Summary:        Mandriva D-Bus packaging abstraction layer
 License:        GPL
 Group:          Development/Python
-Url:            http://gitorious.org/%{name}
+Url:            http://github.org/jvdm/%{name}
 
 Source0:        %{name}-%{version}.tar.bz2
 
@@ -50,7 +50,7 @@ make build
 
 
 %install
-make install DISTDIR=%{buildroot} \
+make install DESTDIR=%{buildroot} \
              sbindir=%{_sbindir} \
              datadir=%{_datadir} \
              libdir=%{_libdir} \
