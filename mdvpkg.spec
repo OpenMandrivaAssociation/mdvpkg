@@ -4,7 +4,7 @@
 
 Name:           mdvpkg
 Version:        0.5.4
-Release:        0
+Release:        1
 
 Summary:        Mandriva D-Bus packaging abstraction layer
 License:        GPL
@@ -50,7 +50,11 @@ make build
 
 
 %install
-make install ROOT=%{buildroot}
+make install DISTDIR=%{buildroot} \
+             sbindir=%{_sbindir} \
+             datadir=%{_datadir} \
+             libdir=%{_libdir} \
+             docdir=%{_docdir}
 
 
 %clean
