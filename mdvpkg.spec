@@ -1,24 +1,23 @@
 %define mandriva_datadir %{_datadir}/mandriva
 %define mandriva_docdir %{_datadir}/doc/mandriva
-%define mandriva_libdir %{_libdir}/mandriva
 
 Name:           mdvpkg
-Version:        0.5.4
-Release:        2
+Version:        0.6.2
+Release:        0
 
 Summary:        Mandriva D-Bus packaging abstraction layer
 License:        GPL
 Group:          Development/Python
-Url:            http://github.org/jvdm/%{name}
+Url:            https://github.com/downloads/jvdm/mdvpkg/%{name}-%{version}.tar.bz2
 
 Source0:        %{name}-%{version}.tar.bz2
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch:      noarch
 
-BuildRequires:	libpython-devel
-BuildRequires:	librpm-devel
 Requires:       python >= 2.7
 Requires:       python-dbus
+Requires:       python-rpm
 
 
 %description
@@ -38,7 +37,7 @@ features are aimed:
 
 * Python QT/QML widgets to manage package tasks
 
-It's inspired on ideas from PackageKit and aptdaemon.
+It is inspired on ideas from PackageKit and aptdaemon.
 
 
 %prep
@@ -46,15 +45,11 @@ It's inspired on ideas from PackageKit and aptdaemon.
 
 
 %build
-make build
 
 
 %install
-make install DESTDIR=%{buildroot} \
-             sbindir=%{_sbindir} \
-             datadir=%{_datadir} \
-             libdir=%{_libdir} \
-             docdir=%{_docdir}
+%__python setup.py install --root=%{buildroot}
+rm %{buildroot}%{mandriva_datadir}/%{name}/mdvpkg-0.6.1-py2.7.egg-info
 
 
 %clean
@@ -73,5 +68,4 @@ find %{mandriva_datadir}/%{name}/mdvpkg -type f \
 %{mandriva_datadir}/%{name}
 %{_sysconfdir}/dbus-1/system.d/org.mandrivalinux.mdvpkg.conf
 %{_datadir}/dbus-1/system-services/org.mandrivalinux.mdvpkg.service
-%{mandriva_libdir}/%{name}
-%doc %{mandriva_docdir}/%{name}
+%doc doc/* README TODO
