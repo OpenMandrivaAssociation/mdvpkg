@@ -3,7 +3,7 @@
 
 Name:           mdvpkg
 Version:        0.6.3
-Release:        0
+Release:        1
 
 Summary:        Mandriva D-Bus packaging abstraction layer
 License:        GPL
