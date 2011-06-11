@@ -2,7 +2,7 @@
 %define mandriva_docdir %{_datadir}/doc/mandriva
 
 Name:           mdvpkg
-Version:        0.6.2
+Version:        0.6.3
 Release:        0
 
 Summary:        Mandriva D-Bus packaging abstraction layer
@@ -49,11 +49,7 @@ It is inspired on ideas from PackageKit and aptdaemon.
 
 %install
 %__python setup.py install --root=%{buildroot}
-rm %{buildroot}%{mandriva_datadir}/%{name}/mdvpkg-0.6.1-py2.7.egg-info
-
-
-%clean
-rm -rf %{buildroot}
+rm -f %{buildroot}%{mandriva_datadir}/%{name}/%{name}-%{version}-py*.egg-info
 
 
 %preun
