@@ -3,7 +3,7 @@
 
 Name:           mdvpkg
 Version:        0.6.3
-Release:        1
+Release:        2
 
 Summary:        Mandriva D-Bus packaging abstraction layer
 License:        GPL
@@ -17,6 +17,7 @@ BuildArch:      noarch
 
 Requires:       python >= 2.7
 Requires:       python-dbus
+Requires:       python-pyinotify
 Requires:       python-rpm
 
 
