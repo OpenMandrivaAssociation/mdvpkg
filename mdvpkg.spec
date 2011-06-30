@@ -2,8 +2,8 @@
 %define mandriva_docdir %{_datadir}/doc/mandriva
 
 Name:           mdvpkg
-Version:        0.7.0
-Release:        0
+Version:        0.6.3
+Release:        3
 
 Summary:        Mandriva D-Bus packaging abstraction layer
 License:        GPL
@@ -63,7 +63,6 @@ find %{mandriva_datadir}/%{name}/mdvpkg -type f \
 %defattr(-,root,root) 
 %{_sbindir}/mdvpkgd
 %{mandriva_datadir}/%{name}
-%{_sysconfdir}/dbus-1/system.d/org.mandrivalinux.MdvPkg.conf
-%{_datadir}/dbus-1/system-services/org.mandrivalinux.MdvPkg.service
-%{_datadir}/polkit-1/actions/org.mandrivalinux.mdvpkg.policy
+%{_sysconfdir}/dbus-1/system.d/org.mandrivalinux.mdvpkg.conf
+%{_datadir}/dbus-1/system-services/org.mandrivalinux.mdvpkg.service
 %doc doc/* README TODO
