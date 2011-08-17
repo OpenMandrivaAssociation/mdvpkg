@@ -2,7 +2,7 @@
 %define mandriva_docdir %{_datadir}/doc/mandriva
 
 Name:           mdvpkg
-Version:        0.8.0
+Version:        0.8.1
 Release:        0
 
 Summary:        Mandriva D-Bus packaging abstraction layer
