@@ -4,7 +4,7 @@
 Summary:	Mandriva D-Bus packaging abstraction layer
 Name:		mdvpkg
 Version:	0.8.1
-Release:	4
+Release:	5
 License:	GPLv2
 Group:		Development/Python
 Url:		https://github.com/downloads/jvdm/mdvpkg/%{name}-%{version}.tar.bz2
