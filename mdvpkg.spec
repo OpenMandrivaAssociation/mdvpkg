@@ -10,7 +10,7 @@ Group:		Development/Python
 Url:		https://github.com/downloads/jvdm/mdvpkg/%{name}-%{version}.tar.bz2
 Source0:	%{name}-%{version}.tar.bz2
 BuildArch:	noarch
-Requires:	python >= 2.7
+Requires:	python2
 Requires:	python-dbus
 Requires:	python-pyinotify
 Requires:	python-rpm
@@ -37,7 +37,7 @@ It is inspired on ideas from PackageKit and aptdaemon.
 %build
 
 %install
-%__python setup.py install --root=%{buildroot}
+%__python2 setup.py install --root=%{buildroot}
 rm -f %{buildroot}%{mandriva_datadir}/%{name}/%{name}-%{version}-py*.egg-info
 
 %files
